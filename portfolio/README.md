@@ -2,42 +2,26 @@
 
 Professional portfolio website showcasing IT Systems, DevOps, and Cloud Engineering expertise.
 
-## 🚀 Features
+## Tech Stack
 
-- **Dual Language Support**: Hebrew/English toggle
-- **Responsive Design**: Works on all devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Interactive Sections**: 
-  - Experience timeline
-  - Skills matrix
-  - Academic transcript with top grades
-  - Certifications & awards
+- React 19
+- Vite
+- Tailwind CSS
+- Lucide React
 
-## 🛠️ Tech Stack
-
-- **React 19** - UI framework
-- **Vite** - Build tool
-- **Tailwind CSS** - Styling
-- **Lucide React** - Icons
-
-## 📦 Installation
+## Development
 
 ```bash
 npm install
-```
-
-## 🏃 Development
-
-```bash
 npm run dev
 ```
 
-## 🏗️ Build
+## Build
 
 ```bash
 npm run build
 ```
 
-## 📄 License
+## Deployment
 
-Private - Personal Portfolio
+Automatically deployed to GitHub Pages via GitHub Actions.

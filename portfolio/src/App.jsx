@@ -14,12 +14,10 @@ import {
   Network,
   Server,
   Shield,
-  Sparkles,
   Star,
   Users,
   Monitor,
   Award,
-  Send,
 } from 'lucide-react'
 import './index.css'
 
@@ -315,14 +313,6 @@ const ui = {
       transcript: 'Academic Transcript',
       contact: 'Contact',
     },
-    contactForm: {
-      name: 'Name',
-      email: 'Email',
-      message: 'Message',
-      send: 'Send Message',
-      sending: 'Sending...',
-      sent: 'Message sent!',
-    },
     transcriptHint: 'Core highlights: Security, Networks, Operating Systems',
     coreCategories: {
       systems: 'Systems & Security',
@@ -357,14 +347,6 @@ const ui = {
       education: 'השכלה, הסמכות ופרסים',
       transcript: 'גיליון ציונים',
       contact: 'יצירת קשר',
-    },
-    contactForm: {
-      name: 'שם',
-      email: 'אימייל',
-      message: 'הודעה',
-      send: 'שלח הודעה',
-      sending: 'שולח...',
-      sent: 'הודעה נשלחה!',
     },
     transcriptHint: 'קורסי ליבה: אבטחה, רשתות, מערכות הפעלה',
     coreCategories: {
@@ -433,8 +415,6 @@ const MetricCard = ({ icon: Icon, value, label }) => (
 function App() {
   const [lang, setLang] = useState('en')
   const [openSemester, setOpenSemester] = useState(0)
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [formStatus, setFormStatus] = useState('idle')
   const contactRef = useRef(null)
 
   useEffect(() => {
@@ -467,17 +447,6 @@ function App() {
       sections.forEach((section) => observer.unobserve(section))
     }
   }, [lang])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('sending')
-    // Simulate form submission (replace with EmailJS or backend)
-    setTimeout(() => {
-      setFormStatus('sent')
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setFormStatus('idle'), 3000)
-    }, 1500)
-  }
 
   const t = ui[lang]
   const skills = lang === 'en' ? data.skills : data.skillsHe
@@ -533,7 +502,8 @@ function App() {
               {lang === 'en' ? 'עב' : 'EN'}
             </button>
             <a
-              href="#"
+              href="/cv.pdf"
+              download
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-semibold text-white shadow-sm hover:shadow-md transition"
             >
               <Download size={16} />
@@ -554,7 +524,8 @@ function App() {
             </div>
             <div className="flex flex-wrap gap-3">
               <a
-                href="#"
+                href="/cv.pdf"
+                download
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-semibold text-white shadow-sm hover:shadow-md transition"
               >
                 <Download size={16} />
