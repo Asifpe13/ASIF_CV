@@ -10,8 +10,8 @@ export default {
       colors: {
         surface: '#ffffff',
         panel: '#f8f9fa',
-        accent: '#1a5f3f',
-        accent2: '#2d8659',
+        accent: '#b4231a', // deep red for professional highlight
+        accent2: '#ef4444', // bright red for secondary accents
         text: '#1e293b',
         textLight: '#64748b',
       },

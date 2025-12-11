@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Languages,
   Mail,
+  Phone,
   Network,
   Server,
   Shield,
@@ -297,11 +298,13 @@ const ui = {
     name: 'Asif Perets',
     title: 'CV - ASIF PERETS',
     about: {
-      intro: 'Software Engineering student with extensive hands-on experience in IT infrastructure, system administration, and team leadership. Proven track record in high-pressure operational environments.',
-      analytical: 'I approach problems with strong analytical and mathematical thinking, breaking down complex challenges into manageable components. This mindset helps me build reliable systems and learn quickly under pressure.',
-      personal: 'Outside of work and studies, I enjoy football, music, and TV series. These interests help me maintain balance and stay creative.',
+      intro:
+        'Software Engineering student with deep, hands-on IT practice across infrastructure, systems, and team leadership — delivering calmly in mission-critical environments.',
+      analytical:
+        'I tackle problems with precise analytical and mathematical thinking, breaking complex challenges into clear, actionable steps to ship reliable systems fast.',
+      personal: 'Off-shift I recharge with football, music, and standout series — keeping balance and creativity sharp.',
     },
-    heroTags: ['IT Leadership', 'Systems Hardening', 'Network Ops'],
+    heroTags: ['IT Leadership', 'System Hardening', 'Network Ops'],
     ctaPrimary: 'Download CV',
     ctaSecondary: 'Contact me',
     sections: {
@@ -321,7 +324,13 @@ const ui = {
     },
     creditsLabel: 'credits',
     contactFields: [
-      { label: 'Email', value: 'asif13perets13@gmail.com', icon: Mail, href: 'mailto:asif13perets13@gmail.com' },
+      {
+        label: 'Email',
+        value: 'asif13perets13@gmail.com',
+        icon: Mail,
+        href: 'mailto:asif13perets13@gmail.com?subject=Contact%20from%20CV&body=Hi%20Asif,%20I%27d%20like%20to%20connect%20regarding...',
+      },
+      { label: 'Phone', value: '050-2972020', icon: Phone, href: 'tel:0502972020' },
       { label: 'LinkedIn', value: 'linkedin.com/in/asif-perets-285520366', icon: ExternalLink, href: 'https://linkedin.com/in/asif-perets-285520366' },
       { label: 'Portfolio', value: 'GitHub Portfolio', icon: ExternalLink, href: '#' },
     ],
@@ -332,9 +341,11 @@ const ui = {
     name: 'אסיף פרץ',
     title: 'קורות חיים - אסיף פרץ',
     about: {
-      intro: 'סטודנט להנדסת תוכנה עם ניסיון מעשי רחב ב-IT, ניהול מערכות והובלת צוותים. רקורד מוכח בסביבות לחץ מבצעי.',
-      analytical: 'אני ניגש לבעיות עם חשיבה אנליטית וראש מתמטי חזק, מפרק אתגרים מורכבים לחלקים ניתנים לניהול. הגישה הזו עוזרת לי לבנות מערכות אמינות וללמוד מהר תחת לחץ.',
-      personal: 'מחוץ לעבודה וללימודים, אני נהנה מכדורגל, מוזיקה וסדרות טלוויזיה. התחביבים האלה עוזרים לי לשמור על איזון ולהישאר יצירתי.',
+      intro:
+        'סטודנט להנדסת תוכנה עם ניסיון שטח עמוק ב-IT, ניהול מערכות והובלת צוותים — עם ביצועים מוכחים גם תחת לחץ.',
+      analytical:
+        'אני מפרק בעיה מורכבת לצעדים ברורים בעזרת חשיבה אנליטית ומתמטית, כדי לספק מערכות אמינות ומהירות.',
+      personal: 'מחוץ למסך אני נטען עם כדורגל, מוזיקה וסדרות טובות — שומר על איזון ויצירתיות.',
     },
     heroTags: ['הובלת IT', 'הקשחת מערכות', 'תפעול רשת'],
     ctaPrimary: 'הורדת קו״ח',
@@ -356,7 +367,13 @@ const ui = {
     },
     creditsLabel: 'נק״ז',
     contactFields: [
-      { label: 'אימייל', value: 'asif13perets13@gmail.com', icon: Mail, href: 'mailto:asif13perets13@gmail.com' },
+      {
+        label: 'אימייל',
+        value: 'asif13perets13@gmail.com',
+        icon: Mail,
+        href: 'mailto:asif13perets13@gmail.com?subject=יצירת%20קשר%20מהאתר&body=היי%20אסיף,%20אשמח%20ליצור%20קשר%20לגבי...',
+      },
+      { label: 'טלפון', value: '050-2972020', icon: Phone, href: 'tel:0502972020' },
       { label: 'LinkedIn', value: 'linkedin.com/in/asif-perets-285520366', icon: ExternalLink, href: 'https://linkedin.com/in/asif-perets-285520366' },
       { label: 'תיק עבודות', value: 'GitHub Portfolio', icon: ExternalLink, href: '#' },
     ],
@@ -368,7 +385,7 @@ const Section = forwardRef(({ title, icon: Icon, children, id }, ref) => (
   <section
     id={id}
     ref={ref}
-    className="scroll-mt-20 rounded-3xl border border-slate-200 bg-panel p-6 shadow-sm transition-all duration-700 snap-start scroll-snap-align-start opacity-0 translate-y-4"
+    className="scroll-mt-20 rounded-3xl border border-slate-200/80 bg-panel p-6 shadow-sm transition-all duration-700 snap-start scroll-snap-align-start opacity-0 translate-y-4 hover:shadow-md hover:border-accent/20"
   >
     <div className="mb-4 flex items-center gap-3">
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-accent2/10 text-accent">
@@ -459,7 +476,7 @@ function App() {
     'כישורים אקדמיים בלבד': 'Academic',
   }
 
-  const [viewMode, setViewMode] = useState('skills') // skills | gradesCore | gradesFull
+  const [viewMode, setViewMode] = useState('gradesCore') // gradesCore | gradesFull
   
   // Top courses by category
   const topCourses = {
@@ -478,6 +495,14 @@ function App() {
       { name: 'Databases', nameHe: 'מסדי נתונים', grade: 87, credits: 6.0 },
       { name: 'Algorithms I', nameHe: 'אלגוריתמים א׳', grade: 87, credits: 4.0 },
     ],
+  }
+
+  const handleEmailClick = (item) => {
+    if (!item) return
+    const mailto = item.href?.startsWith('mailto')
+      ? item.href
+      : `mailto:${item.value}?subject=Hello%20Asif&body=Hi%20Asif,%20I%27d%20like%20to%20connect...`
+    window.location.href = mailto
   }
 
   return (
@@ -667,12 +692,6 @@ function App() {
         <Section title={t.sections.transcript} icon={BookOpen}>
           <div className="mb-3 flex flex-wrap gap-2">
             <button
-              onClick={() => setViewMode('skills')}
-              className={`rounded-lg px-3 py-2 text-sm border transition ${viewMode === 'skills' ? 'border-accent text-accent bg-accent/10' : 'border-slate-200 text-textLight hover:border-accent/50 bg-panel'}`}
-            >
-              {lang === 'en' ? 'Skills & Awards' : 'כישורים ופרסים'}
-            </button>
-            <button
               onClick={() => setViewMode('gradesCore')}
               className={`rounded-lg px-3 py-2 text-sm border transition ${viewMode === 'gradesCore' ? 'border-accent text-accent bg-accent/10' : 'border-slate-200 text-textLight hover:border-accent/50 bg-panel'}`}
             >
@@ -685,21 +704,6 @@ function App() {
               {lang === 'en' ? 'Full transcript' : 'גליון מלא'}
             </button>
           </div>
-
-          {viewMode === 'skills' && (
-            <div className="grid gap-3 md:grid-cols-2">
-              {data.certs.map((item) => (
-                <Card key={item.title}>
-                  <div className="flex items-center justify-between">
-                    <p className="font-semibold text-text">{lang === 'en' ? item.title : item.titleHe}</p>
-                    <span className="text-xs text-textLight">{item.year}</span>
-                  </div>
-                  <p className="text-sm text-accent">{lang === 'en' ? item.issuer : item.issuerHe}</p>
-                  <p className="mt-2 text-sm text-textLight">{lang === 'en' ? item.details : item.detailsHe}</p>
-                </Card>
-              ))}
-            </div>
-          )}
 
           {viewMode === 'gradesCore' && (
             <div className="grid gap-6 md:grid-cols-3">
@@ -779,7 +783,8 @@ function App() {
                 href={item.href || (item.value.startsWith('http') ? `https://${item.value}` : `mailto:${item.value}`)}
                 target={item.href?.startsWith('http') || item.value.startsWith('http') ? '_blank' : undefined}
                 rel={item.href?.startsWith('http') || item.value.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-panel p-4 transition hover:border-accent/50 hover:shadow-sm"
+                onClick={item.href?.startsWith('mailto') || item.value.includes('@') ? (e) => { e.preventDefault(); handleEmailClick(item) } : undefined}
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-panel p-4 transition hover:border-accent/60 hover:shadow-md hover:-translate-y-0.5"
                 aria-label={item.label}
               >
                 <div className="rounded-lg bg-accent/10 p-2 text-accent">
