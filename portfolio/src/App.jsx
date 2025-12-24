@@ -332,7 +332,6 @@ const ui = {
       },
       { label: 'Phone', value: '050-2972020', icon: Phone, href: 'tel:0502972020' },
       { label: 'LinkedIn', value: 'linkedin.com/in/asif-perets-285520366', icon: ExternalLink, href: 'https://linkedin.com/in/asif-perets-285520366' },
-      { label: 'Portfolio', value: 'GitHub Portfolio', icon: ExternalLink, href: '#' },
     ],
     langLabel: 'EN',
   },
@@ -375,7 +374,6 @@ const ui = {
       },
       { label: 'טלפון', value: '050-2972020', icon: Phone, href: 'tel:0502972020' },
       { label: 'LinkedIn', value: 'linkedin.com/in/asif-perets-285520366', icon: ExternalLink, href: 'https://linkedin.com/in/asif-perets-285520366' },
-      { label: 'תיק עבודות', value: 'GitHub Portfolio', icon: ExternalLink, href: '#' },
     ],
     langLabel: 'עב',
   },
@@ -513,7 +511,7 @@ function App() {
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent2 text-white font-mono font-black">
               AP
             </div>
-      <div>
+            <div>
               <p className="font-mono text-sm uppercase tracking-[0.08em] text-accent">{t.name}</p>
               <p className="text-xs text-textLight">{lang === 'en' ? 'IT Systems · DevOps · Cloud' : 'מערכות IT · DevOps · ענן'}</p>
             </div>
@@ -561,8 +559,8 @@ function App() {
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 font-semibold text-text hover:border-accent hover:text-accent transition bg-panel"
               >
                 {t.ctaSecondary} <ArrowRight size={16} />
-        </a>
-      </div>
+              </a>
+            </div>
             <div className="flex flex-wrap gap-2 text-xs text-textLight">
               {t.heroTags.map((chip) => (
                 <Tag key={chip} label={chip} />
@@ -752,7 +750,7 @@ function App() {
                         className={`transition ${isOpen ? 'rotate-180 text-accent' : 'text-textLight'}`}
                         size={18}
                       />
-        </button>
+                    </button>
                     <div className={`transition-all ${isOpen ? 'max-h-[520px]' : 'max-h-0'} overflow-hidden`}>
                       <div className="divide-y divide-slate-200 border-t border-slate-200">
                         {sem.courses.map((c) => (
@@ -810,7 +808,7 @@ function App() {
           </div>
         </footer>
       </main>
-      </div>
+    </div>
   )
 }
 
