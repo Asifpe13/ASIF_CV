@@ -527,8 +527,8 @@ function App() {
               {lang === 'en' ? 'עב' : 'EN'}
             </button>
             <a
-              href="/cv.pdf"
-              download
+              href={`${import.meta.env.BASE_URL}cv.pdf`}
+              download="Asif_Perets_CV.pdf"
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-semibold text-white shadow-sm hover:shadow-md transition"
             >
               <Download size={16} />
@@ -549,8 +549,8 @@ function App() {
             </div>
             <div className="flex flex-wrap gap-3">
               <a
-                href="/cv.pdf"
-                download
+                href={`${import.meta.env.BASE_URL}cv.pdf`}
+                download="Asif_Perets_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 font-semibold text-white shadow-sm hover:shadow-md transition"
               >
                 <Download size={16} />
